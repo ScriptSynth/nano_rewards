@@ -21,6 +21,8 @@ jobs:
           node-version: 18
 
       - name: Install dependencies
+        env:
+          npm_config_platform: any    # <-- Add this line
         run: npm install
 
       - name: Build project
